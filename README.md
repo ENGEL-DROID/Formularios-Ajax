@@ -2,4 +2,4 @@
 
 Validación de un Formulario sencillo utilizando Ajax
 
-live: https://formulario-ajax.netlify.app/
+live: http://pruebaspipex.esy.es/formulario-ajax/
