@@ -47,9 +47,9 @@ $(document).ready(function() {
 		console.log("Los datos devueltos son: " + datos_devueltos);
 		if(datos_devueltos=="autorizado") {
 			// se utiliza el método html() para agregar contenido 
-			$("#contenidos_externos").html("<p>Datos correctos, bienvenido!</p>");  
+			$("#contenidos_externos").html("<p>Datos correctos, bienvenido!</p> <br/> <p>Atención: Netlify no trabaja directamente php por lo tanto se debe agregar el atributo:  data-netlify='true' para que el formulario sea reconocido</p>");  
 		} else {
-			$("#contenidos_externos").html("<p>Datos incorrectos, verifique e intente nuevamente.</p> <br/> <p>Atención: Netlify no devuelve correctamente la respuesta php por lo tanto siempre va a ser incorrrecta la data</p>");  
+			$("#contenidos_externos").html("<p>Datos incorrectos, verifique e intente nuevamente.</p> <br/> <p>Atención: Netlify no trabaja directamente php por lo tanto se debe agregar el atributo:  data-netlify='true' para que el formulario sea reconocido</p>");  
 		}
 	}
 }); 
@@ -64,7 +64,7 @@ $(document).ready(function() {
 	</div>
 	<div class="contenido">
 		<div class="principal">
-			<form method="get" action="login.php" id="login">
+			<form method="get" action="login.php" id="login" data-netlify="true">
             <table>
             	<tr>
                 	<td>					
