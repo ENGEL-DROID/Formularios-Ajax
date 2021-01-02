@@ -27,11 +27,13 @@ $(document).ready(function() {
 	// se enlaza el método submit() con el formulario a trabajar
 	$("#login").submit(function() {
 		// se crea un Literal empaquetando los datos a enviar:
-		var datosFormulario= {
+		/* var datosFormulario= {
 			// se aplica la fórmula=  nombre: valor.val()
 			usuario: $("#usuario").val(),
 			contra: $("#contra").val()
-		}
+		} */
+		// con el método serialize() de jQuery se recorre todo el formulario y automáticamente crea el Literal y agrega todos los campos con su respectivo valor:
+		var datosFormulario= $(this).serialize(); 
 		// se monta todo el paquete de envío get() y se envía
 		// primero se pone el archivo encargado de recibir la data: login.php
 		// luego se pone la data a enviar (el Literal)
