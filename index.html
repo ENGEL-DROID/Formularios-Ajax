@@ -37,8 +37,9 @@ $(document).ready(function() {
 		// se monta todo el paquete de envío get() y se envía
 		// primero se pone el archivo encargado de recibir la data: login.php
 		// luego se pone la data a enviar (el Literal)
-		// finalmente se pone la función que procesará la data en caso de recibir un retorno positivo
-		$.get("login.php", datosFormulario, procesarDatos);
+		// después se pone la función que procesará la data en caso de recibir un retorno positivo
+		// finalmente se encadena el método error() para procesar cualquier inconveniente ocurrido durante el proceso
+		$.get("login.php", datosFormulario, procesarDatos).error(procesarError);
 		// para evitar que el submit() recargue la página se trunca su acción:
 		return false;
 	});
@@ -53,6 +54,11 @@ $(document).ready(function() {
 		} else {
 			$("#contenidos_externos").html("<p>Datos incorrectos, verifique e intente nuevamente.</p>" + info);  
 		}
+	}
+	// función que procesa si ocurre algún error
+	function procesarError() {
+		var msgError= "A ocurrido un error inesperado! :/";
+		$("#contenidos_externos").html("<p>" + msgError + "</p>");
 	}
 }); 
 </script>
