@@ -39,16 +39,16 @@ $(document).ready(function() {
 		$.get("login.php", datosFormulario, procesarDatos);
 		// para evitar que el submit() recargue la página se trunca su acción:
 		return false;
-		// se crea la función que procesa la respuesta del servidor
-		function procesarDatos(datos_devueltos) {
-			if(datos_devueltos=="autorizado") {
-				// se utiliza el método html() para agregar contenido 
-				$("#contenidos_externos").html("<p>Datos correctos, bienvenido!");  
-			} else {
-				$("#contenidos_externos").html("<p>Datos incorrectos, verifique e intente nuevamente.");  
-			}
+	});
+	// se crea la función que procesa la respuesta del servidor
+	function procesarDatos(datos_devueltos) {
+		if(datos_devueltos=="autorizado") {
+			// se utiliza el método html() para agregar contenido 
+			$("#contenidos_externos").html("<p>Datos correctos, bienvenido!");  
+		} else {
+			$("#contenidos_externos").html("<p>Datos incorrectos, verifique e intente nuevamente.");  
 		}
-	})	
+	}
 }); 
 </script>
 
