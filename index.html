@@ -47,9 +47,9 @@ $(document).ready(function() {
 		console.log("Los datos devueltos son: " + datos_devueltos);
 		if(datos_devueltos=="autorizado") {
 			// se utiliza el método html() para agregar contenido 
-			$("#contenidos_externos").html("<p>Datos correctos, bienvenido!");  
+			$("#contenidos_externos").html("<p>Datos correctos, bienvenido!</p>");  
 		} else {
-			$("#contenidos_externos").html("<p>Datos incorrectos, verifique e intente nuevamente.");  
+			$("#contenidos_externos").html("<p>Datos incorrectos, verifique e intente nuevamente.</p> <br/> <p>Atención: Netlify no devuelve correctamente la respuesta php por lo tanto siempre va a ser incorrrecta la data</p>");  
 		}
 	}
 }); 
