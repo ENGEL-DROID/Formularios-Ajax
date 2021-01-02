@@ -38,8 +38,8 @@ $(document).ready(function() {
 		// primero se pone el archivo encargado de recibir la data: login.php
 		// luego se pone la data a enviar (el Literal)
 		// después se pone la función que procesará la data en caso de recibir un retorno positivo
-		// finalmente se encadena el método error() para procesar cualquier inconveniente ocurrido durante el proceso
-		$.get("login.php", datosFormulario, procesarDatos).error(procesarError);
+		// finalmente se encadena el método fail() para procesar cualquier inconveniente ocurrido durante el proceso
+		$.get("login.php", datosFormulario, procesarDatos).fail(procesarError);
 		// para evitar que el submit() recargue la página se trunca su acción:
 		return false;
 	});
