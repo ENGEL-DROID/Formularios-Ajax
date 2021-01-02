@@ -42,7 +42,7 @@ $(document).ready(function() {
 	});
 	// se crea la función que procesa la respuesta del servidor
 	function procesarDatos(datos_devueltos) {
-		console.log(datos_devueltos);
+		console.log("Los datos devueltos son: " + datos_devueltos);
 		if(datos_devueltos==1) {
 			// se utiliza el método html() para agregar contenido 
 			$("#contenidos_externos").html("<p>Datos correctos, bienvenido!");  
