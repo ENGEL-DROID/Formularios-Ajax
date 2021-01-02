@@ -36,7 +36,7 @@ $(document).ready(function() {
 		// primero se pone el archivo encargado de recibir la data: login.php
 		// luego se pone la data a enviar (el Literal)
 		// finalmente se pone la función que procesará la data en caso de recibir un retorno positivo
-		$.get("login.php", datosFormulario, procesarDatos)
+		$.get("login.php", datosFormulario, procesarDatos);
 		// para evitar que el submit() recargue la página se trunca su acción:
 		return false;
 		// se crea la función que procesa la respuesta del servidor
@@ -88,7 +88,7 @@ $(document).ready(function() {
 			</form>
 
 			<hr>
-			
+
 			<div id="contenidos_externos"></div>
 		</div>
 	</div>
